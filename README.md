@@ -1,2 +1,1 @@
-#Read Me
 Hello, my name is Evan Armstrong.
