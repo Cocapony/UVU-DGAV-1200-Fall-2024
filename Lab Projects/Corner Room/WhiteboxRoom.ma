@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: WhiteboxRoom.ma
-//Last modified: Thu, Sep 05, 2024 10:06:24 PM
+//Last modified: Mon, Sep 09, 2024 12:36:05 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "9E285838-4C38-901C-07CF-0DA2696201F3";
+fileInfo "UUID" "C249552F-46A8-6043-CCD3-3F875F4C1111";
 createNode transform -s -n "persp";
 	rename -uid "42467854-4423-A020-1A6B-31A5D2B38E87";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.917149833803434 12.733646616698625 10.133937411703286 ;
-	setAttr ".r" -type "double3" -31.271553176318218 39.729251899585783 0 ;
+	setAttr ".t" -type "double3" 12.461424331752756 9.0003231283471052 12.738669753435486 ;
+	setAttr ".r" -type "double3" -20.471553176318324 34.129251899585867 -9.6057459313968505e-16 ;
 	setAttr ".rp" -type "double3" 1.7763568394002505e-15 1.2212453270876722e-15 -7.1054273576010019e-15 ;
 	setAttr ".rpt" -type "double3" -5.4656785329285889e-15 -3.5255722525046186e-15 1.0831673272335747e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -83,6 +83,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "pCube1";
 	rename -uid "8201726E-4919-510D-16AD-2B8329050A79";
+	setAttr ".t" -type "double3" 0.015813183193571945 0.023457504507935489 -0.021297239029571813 ;
 	setAttr ".rp" -type "double3" 0.018921294349485862 2.9220631305789375 -0.037617457688562617 ;
 	setAttr ".sp" -type "double3" 0.018921294349485862 2.9220631305789375 -0.037617457688562617 ;
 createNode mesh -n "pCubeShape1" -p "pCube1";
@@ -151,20 +152,20 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A2F55B04-4C73-4F40-BFB8-07B5982FE105";
+	rename -uid "2AA3DDDF-4876-92E5-8F6A-8EBDB7C025F3";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "7F8767E0-40D1-7546-8477-25AA0929E72C";
+	rename -uid "3C0130CB-45CD-D79D-0094-BDA1209DEAD3";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "DAFF9D6F-4735-55D5-E4DF-0691F7F95516";
+	rename -uid "C833AA0A-41B0-E6F0-3F21-0BA7AB16D888";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "447C3FEA-46A5-BCEF-37B3-D896AE568023";
+	rename -uid "F20CADE5-43E5-2480-CF28-D6AB918F8C27";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "84B94302-42CA-C95C-0A17-83868BF4ED2E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "ADD8077E-470D-01DF-623F-FE831D5FAE48";
+	rename -uid "BFCE8882-48CD-6F99-7789-058F8A777113";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FA0EEC91-4A18-68FB-8674-EBA6433B20CD";
 	setAttr ".g" yes;
@@ -325,8 +326,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
