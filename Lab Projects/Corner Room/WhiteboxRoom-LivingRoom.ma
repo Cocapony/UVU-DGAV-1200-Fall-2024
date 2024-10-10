@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: WhiteboxRoom-LivingRoom.ma
-//Last modified: Wed, Oct 09, 2024 06:33:34 PM
+//Last modified: Wed, Oct 09, 2024 06:37:24 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "A5920270-437A-EEA9-F7C3-06910D74D4DC";
+fileInfo "UUID" "05DCDC3A-413D-9F50-C3E6-B7A7A16BEB78";
 createNode transform -s -n "persp";
 	rename -uid "42467854-4423-A020-1A6B-31A5D2B38E87";
 	setAttr ".v" no;
@@ -17406,29 +17406,26 @@ createNode aiSkyDomeLight -n "aiSkyDomeLightShape1" -p "aiSkyDomeLight1";
 	setAttr ".intensity" 0.70512819290161133;
 createNode transform -n "pointLight1";
 	rename -uid "9010D467-4C8C-CFB0-DA3D-FEBC4B7BE2E4";
-	setAttr ".v" no;
 	setAttr ".t" -type "double3" -1.9680767608874794 4.6027327614622164 -0.50735171260967826 ;
 createNode pointLight -n "Lamp_Light" -p "pointLight1";
 	rename -uid "E74B57DC-484A-CC8E-9F5E-EB8CFF14B090";
 	setAttr -k off ".v";
 	setAttr ".cl" -type "float3" 0.54000002 0.3653 0.095200002 ;
-	setAttr ".in" 4.3589744567871094;
+	setAttr ".in" 3.5256409645080566;
 	setAttr ".us" no;
 	setAttr ".ai_radius" 0.58441555500030518;
 createNode transform -n "TV_Light";
 	rename -uid "2D9EC526-4CAF-13AB-F25C-2F8B724863A6";
-	setAttr ".v" no;
 	setAttr ".t" -type "double3" 1.5544922245918833 1.1347190476799405 0.50408222132506952 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 	setAttr ".s" -type "double3" 0.4 0.4 0.4 ;
 createNode areaLight -n "TV_LightShape" -p "TV_Light";
 	rename -uid "C5D2DACC-4139-2938-28C8-20B2E1B1C156";
 	setAttr -k off ".v";
-	setAttr ".cl" -type "float3" 0.164 0.48660001 0.7604 ;
-	setAttr ".in" 6.4102563858032227;
+	setAttr ".cl" -type "float3" 0.21567577 0.63992631 1 ;
+	setAttr ".in" 8.7820510864257812;
 createNode transform -n "areaLight2";
 	rename -uid "172F0D7D-4061-974D-3FE2-B8AE6B8CE98F";
-	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 6.0096521549854458 0 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 	setAttr ".s" -type "double3" 2.9453941156436696 2.9453941156436696 2.9453941156436696 ;
