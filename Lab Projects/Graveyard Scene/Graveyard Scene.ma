@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Graveyard Scene.ma
-//Last modified: Sat, Oct 12, 2024 02:22:30 PM
+//Last modified: Sat, Oct 12, 2024 02:29:20 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,24 +13,23 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "D6935A88-4089-7DFE-84C6-3EA63206A76A";
+fileInfo "UUID" "744556CA-42D8-164F-A673-B9B339B180D5";
 createNode transform -s -n "persp";
 	rename -uid "1B47FD00-41CE-F7EC-C82F-CDB5749CD35F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -12.90970432986806 8.5021292447582386 19.363608083929218 ;
-	setAttr ".r" -type "double3" -13.800000000000551 326.60000000014236 -9.5243541410813732e-16 ;
-	setAttr ".rp" -type "double3" -2.2204460492503131e-16 4.4408920985006262e-16 -8.8817841970012523e-16 ;
-	setAttr ".rpt" -type "double3" -1.3239753898952242e-15 -1.1526790587444293e-16 -6.9761537402033349e-16 ;
+	setAttr ".t" -type "double3" -10.197747815850638 6.0352085169575522 17.959850495088702 ;
+	setAttr ".r" -type "double3" -6.6000000000000405 -30.800000000000075 0 ;
+	setAttr ".rpt" -type "double3" -4.2873146335624988e-15 6.3504403920296672e-17 4.2802560503188242e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "97008895-431D-B0E3-5B0D-429C94F82E41";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 23.151380934869685;
+	setAttr ".coi" 20.374525604902356;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -2.2442319970197171 2.8675802486036455 -0.0097153659521969082 ;
+	setAttr ".tp" -type "double3" 0.45948155870895818 4.3243961364387502 -4.5109353438892956e-18 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "F8A09D6D-458C-D9F9-4EF4-A58EAE918DE6";
@@ -103,6 +102,7 @@ createNode camera -n "backShape" -p "back";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "Reference_Image";
 	rename -uid "6DB3BC6F-4FC3-0D9B-AA35-A984E060BDBB";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 2.8556498110084152 -4.9891068846901234 ;
 	setAttr ".s" -type "double3" 0.30168661850028422 0.30168661850028422 1 ;
 	setAttr ".rp" -type "double3" 0 0 -8.8817841970012523e-16 ;
@@ -756,15 +756,12 @@ createNode mesh -n "GroundShape" -p "Ground";
 	setAttr ".pt[881]" -type "float3" 0 0.54714406 0 ;
 createNode transform -n "Tomb";
 	rename -uid "5A425F68-4FA1-F3A0-0B7F-A18B1172FADA";
-	setAttr ".t" -type "double3" -0.0042311881215697511 -0.60770669579505898 -1.0949121139098379 ;
-	setAttr ".r" -type "double3" 0 -1.6063582819810844 0 ;
-	setAttr ".rp" -type "double3" -2.1811517477035522 2.1800918579101562 0.10871940851211548 ;
-	setAttr ".rpt" -type "double3" -6.8955258170078082e-17 0 -1.3877787807814457e-17 ;
-	setAttr ".sp" -type "double3" -2.1811517477035522 2.1800918579101562 0.10871940851211548 ;
+	setAttr ".rp" -type "double3" -2.185382935825122 1.5723851621150973 -0.98619270539772252 ;
+	setAttr ".sp" -type "double3" -2.185382935825122 1.5723851621150973 -0.98619270539772252 ;
 createNode transform -n "pCube1" -p "Tomb";
 	rename -uid "2B482509-46A0-DE1C-262D-62A289649E4F";
-	setAttr ".rp" -type "double3" -2.2420986541585357 1.7558932198707564 -4.4748476109404646e-08 ;
-	setAttr ".sp" -type "double3" -2.2420986541585357 1.7558932198707562 -4.4748476109404646e-08 ;
+	setAttr ".rp" -type "double3" -2.2432582052834178 1.1481865240756974 -1.0965779313513988 ;
+	setAttr ".sp" -type "double3" -2.2432582052834178 1.1481865240756972 -1.0965779313513988 ;
 createNode mesh -n "pCubeShape1" -p "pCube1";
 	rename -uid "0B92093F-427B-51B2-D0C3-DA8F1E7A8FE6";
 	setAttr -k off ".v";
@@ -798,27 +795,27 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 53 ".pt[0:52]" -type "float3"  -1.9798273 1.4182062 0.74850029 
-		-2.0031037 1.4182062 0.53399849 -1.9798273 0.6462841 0.74850029 -2.0031037 0.6462841 
-		0.53399849 -2.4810941 0.6462841 -0.53399909 -2.5043705 0.6462841 -0.74850035 -2.4810941 
-		1.4182062 -0.53399909 -2.5043705 1.4182062 -0.74850035 -2.0120001 0.6462841 0.66026706 
-		-2.0334983 0.6462841 0.46215186 -2.4721975 0.6462841 -0.66026783 -2.4506996 0.6462841 
-		-0.46215224 -2.0023296 -4.2520423 0.69301641 -2.0262334 -4.2520423 0.47273141 -2.4861352 
-		-4.2520423 -0.70393461 -2.4622314 -4.2520423 -0.48364994 -1.9816291 -4.2520423 0.75667137 
-		-2.0087454 -4.2520423 0.50678253 -2.4998236 -4.2520423 -0.74964887 -2.4727073 -4.2520423 
-		-0.49975985 -1.9816291 -4.7158966 0.75667137 -2.0087454 -4.7158966 0.50678253 -2.4998236 
-		-4.7158966 -0.74964887 -2.4727073 -4.7158966 -0.49975985 -1.9951873 -7.1234159 0.63172692 
-		-2.4862654 -7.1234159 -0.62470412 -1.9859943 -4.9531493 0.71644455 -2.0043802 -4.9531493 
-		0.54700971 -1.9951873 -6.5855417 0.63172692 -2.0115564 -4.9531493 0.65104336 -2.0299423 
-		-4.9531493 0.4816083 -2.0207493 -6.5855417 0.56632566 -2.0334678 -4.9632082 0.61477017 
-		-2.4236543 -4.9632082 -0.38352838 -2.0448058 -7.1234159 0.50492519 -2.4366026 -7.1234159 
-		-0.49749306 -2.0358472 -4.6798739 0.59284061 -2.426034 -4.6798739 -0.40545794 -2.0449421 
-		-6.6129665 0.50366765 -2.436739 -6.6129665 -0.49875075 -2.0562327 -4.9553127 0.39426118 
-		-2.4496396 -4.9553142 -0.61227703 -2.054126 -4.7044773 0.41367534 -2.4475329 -4.7044787 
-		-0.59286278 -2.0135245 0.47513151 0.64424837 -2.0314026 0.47513151 0.47949448 -2.0253613 
-		-3.5983465 0.48829257 -2.0054827 -3.5983465 0.67148286 -2.4204409 0.48422882 -0.39685336 
-		-2.438319 0.48422885 -0.56160724 -2.4489114 -3.5879521 -0.59536749 -2.4290328 -3.5879521 
-		-0.41217726 -2.0154116 -3.4448087 0.57998264;
+	setAttr -s 53 ".pt[0:52]" -type "float3"  -2.015892 0.81049955 -0.35523242 
+		-2.0335393 0.81049955 -0.54226971 -2.015892 0.038577437 -0.35523242 -2.0335393 0.038577437 
+		-0.54226971 -2.4529777 0.038577437 -1.6508865 -2.4706247 0.038577437 -1.8379234 -2.4529777 
+		0.81049955 -1.6508865 -2.4706247 0.81049955 -1.8379234 -2.0438442 0.038577437 -0.4432376 
+		-2.0601435 0.038577437 -0.61598635 -2.4426723 0.038577437 -1.7499188 -2.4263735 0.038577437 
+		-1.5771697 -2.0355489 -4.8597488 -0.41168523 -2.0536718 -4.8597488 -0.60376531 -2.4546885 
+		-4.8597488 -1.7925007 -2.4365656 -4.8597488 -1.6004208 -2.0176818 -4.8597488 -0.34942442 
+		-2.0382402 -4.8597488 -0.56731784 -2.4664416 -4.8597488 -1.8366368 -2.445883 -4.8597488 
+		-1.6187432 -2.0176818 -5.3236032 -0.34942442 -2.0382402 -5.3236032 -0.56731784 -2.4664416 
+		-5.3236032 -1.8366368 -2.445883 -5.3236032 -1.6187432 -2.027961 -7.7311225 -0.45837122 
+		-2.4561622 -7.7311225 -1.7276897 -2.0209913 -5.5608559 -0.38450068 -2.0349307 -5.5608559 
+		-0.53224134 -2.027961 -7.1932483 -0.45837122 -2.0432804 -5.5608559 -0.45057267 -2.0572197 
+		-5.5608559 -0.59831357 -2.0502501 -7.1932483 -0.52444327 -2.0627246 -5.5709147 -0.49100614 
+		-2.4029522 -5.5709147 -1.4995444 -2.071229 -7.7311225 -0.5865019 -2.4128609 -7.7311225 
+		-1.599202 -2.0645285 -5.2875805 -0.51012784 -2.4047565 -5.2875805 -1.5186661 -2.0713322 
+		-7.2206731 -0.58759838 -2.4129641 -7.2206731 -1.6002986 -2.0798006 -5.5630193 -0.68271178 
+		-2.4228365 -5.5630207 -1.6995741 -2.0782034 -5.3121839 -0.66578341 -2.4212391 -5.3121853 
+		-1.6826458 -2.0449665 -0.13257515 -0.45710051 -2.0585208 -0.13257515 -0.60075963 
+		-2.0531392 -4.2060533 -0.59059644 -2.0380681 -4.2060533 -0.43086153 -2.3997819 -0.12347785 
+		-1.508881 -2.4133363 -0.12347782 -1.6525401 -2.4224586 -4.1956587 -1.6853716 -2.4073877 
+		-4.1956587 -1.5256369 -2.0455959 -4.0525155 -0.51064622;
 	setAttr -s 53 ".vt[0:52]"  -0.49999928 -0.5 0.49999997 0.50000215 -0.5 0.49999988
 		 -0.49999928 0.5 0.49999997 0.50000215 0.5 0.49999988 -0.5 0.5 -0.5 0.50000024 0.5 -0.49999988
 		 -0.5 -0.5 -0.5 0.50000024 -0.5 -0.49999988 -0.46180344 0.5 0.43759048 0.46180534 0.5 0.4375906
@@ -958,8 +955,8 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube2" -p "Tomb";
 	rename -uid "785CAD8B-4524-D358-6D47-BF84769BEF14";
-	setAttr ".rp" -type "double3" -2.3971199989318821 1.1968541145324707 1.0824290513992292 ;
-	setAttr ".sp" -type "double3" -2.3971199989318821 1.1968541145324707 1.0824290513992292 ;
+	setAttr ".rp" -type "double3" -2.4285618957737509 0.58914741873741172 -0.018919865073816489 ;
+	setAttr ".sp" -type "double3" -2.4285618957737509 0.58914741873741172 -0.018919865073816489 ;
 createNode mesh -n "pCubeShape2" -p "pCube2";
 	rename -uid "75822EC1-45A4-7B3E-0087-A9A3B3B4B625";
 	setAttr -k off ".v";
@@ -987,10 +984,10 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  -1.89712 1.6968542 0.58242905 
-		-2.9740138 1.6968541 0.95573044 -1.8880905 1.8112998 0.53859305 -2.9740138 1.9648371 
-		0.95573044 -1.8385298 1.8112998 1.5488017 -2.924453 1.9648371 1.965939 -1.8475593 
-		1.6968542 1.5926377 -2.924453 1.6968541 1.965939;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  -1.9285619 1.0891476 -0.51891983 
+		-3.0158901 1.0891474 -0.14792073 -1.9183071 1.2035931 -0.56248558 -3.0158901 1.3571304 
+		-0.14792073 -1.8690521 1.2035931 0.44910836 -2.966635 1.3571304 0.86367321 -1.8793069 
+		1.0891476 0.49267399 -2.966635 1.0891474 0.86367321;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
 		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
@@ -1014,8 +1011,8 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube3" -p "Tomb";
 	rename -uid "DECBEED8-4783-74C7-C5F2-4AB8848BF1C2";
-	setAttr ".rp" -type "double3" -1.6469194889068552 1.1968541145324707 0.91767531633376775 ;
-	setAttr ".sp" -type "double3" -1.6469194889068552 1.1968541145324707 0.91767531633376775 ;
+	setAttr ".rp" -type "double3" -1.6740377364721906 0.58914741873741172 -0.16257880663369295 ;
+	setAttr ".sp" -type "double3" -1.6740377364721906 0.58914741873741172 -0.16257880663369295 ;
 createNode mesh -n "pCubeShape3" -p "pCube3";
 	rename -uid "C0F86D95-415E-F5ED-F782-BD9ADF0A24EA";
 	setAttr -k off ".v";
@@ -1043,10 +1040,10 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  -1.1738492 1.6968541 0.47068924 
-		-1.8340392 1.696854 0.64330339 -1.2137524 1.8491247 0.45041949 -1.8340392 2.0026619 
-		0.64330339 -1.1868227 1.8491247 1.3974055 -1.8071094 2.0026619 1.5902894 -1.1469196 
-		1.6968541 1.4176753 -1.8071094 1.696854 1.5902894;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  -1.202443 1.0891474 -0.61034065 
+		-1.8676053 1.0891473 -0.42826855 -1.2417623 1.241418 -0.63172096 -1.8676053 1.3949553 
+		-0.42826855 -1.213357 1.241418 0.31604075 -1.8392 1.3949553 0.5194931 -1.1740378 
+		1.0891474 0.33742118 -1.8392 1.0891473 0.5194931;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
 		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
@@ -1070,147 +1067,11 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Tree";
 	rename -uid "636BB0DA-42E2-1162-793B-7987B4A8F00F";
-createNode transform -n "Upper_Branch" -p "Tree";
-	rename -uid "2B8817DF-4A9F-A581-1C41-02BEDE660811";
-createNode nurbsCurve -n "Upper_BranchShape" -p "Upper_Branch";
-	rename -uid "55E25DC9-47CE-E20B-EB96-E6B776F955BC";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 2 0 no 3
-		7 0 0 0 1 2 2 2
-		5
-		2.1181740760803223 5.0552067756652832 -1.9052619934082031
-		2.7908768651444333 5.7902388905090394 -1.9052619934082031
-		2.3847713527942029 6.1234696260919605 -1.9052619934082031
-		2.7006000675942645 6.7494776123112334 -1.7648508349391616
-		3.5706388065427115 6.9770551626724826 -1.2081877686787346
-		;
-createNode transform -n "U_Upper_Curl" -p "Upper_Branch";
-	rename -uid "EEE25FF6-4E3C-A993-6805-D38C6FDFE385";
-	setAttr ".v" no;
-createNode nurbsCurve -n "U_Upper_CurlShape" -p "U_Upper_Curl";
-	rename -uid "B83CF2E0-49C1-13DA-C5D1-D68A29E12E85";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 0 no 3
-		13 0 0 0 1 2 3 4 5 6 7 8 8 8
-		11
-		2.0175867080688477 6.9227442741394043 -1.9244134426116943
-		2.0436176559760031 7.2745492910758136 -1.9547634124755859
-		1.983061578598158 7.8999085007880847 -1.9547634124755859
-		1.2248494641725189 8.6170281845837913 -2.0693934847552931
-		0.5023772279979799 8.6634811498852748 -1.8538868723194057
-		0.28102450533330026 8.2578861860123727 -2.0255548958935097
-		0.55600286332781312 7.8697571802873503 -2.0090762305582519
-		1.048577696434331 7.7754889890303547 -1.9533265722304158
-		1.1270900540937088 8.1437233409890784 -1.976527472991725
-		0.8524650266335716 8.3559921421513987 -2.0070797271522411
-		0.76722063316635492 8.2433917204419132 -2.0310747251557317
-		;
-createNode transform -n "U_Lower_Curl" -p "Upper_Branch";
-	rename -uid "EF823AA4-44A3-9411-D5B0-9783301B2DDB";
-	setAttr ".v" no;
-createNode nurbsCurve -n "U_Lower_CurlShape" -p "U_Lower_Curl";
-	rename -uid "1DFEFC1C-4669-FAD4-DD8D-6DAE90A578E9";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 9 0 no 3
-		14 0 0 0 1 2 3 4 5 6 7 8 9 9 9
-		12
-		3.834355354309082 7.0619053840637207 -1.0404906272888184
-		3.9412247046000015 7.0921767465957437 -1.0041090958461165
-		4.2446585921222475 6.9436562697533928 -1.0098354297253724
-		4.2912861398530788 6.6886652895615084 -1.1109625792600795
-		4.146501368343408 6.369994843983422 -1.0023377167041834
-		3.9186837321596615 6.2532809588371974 -1.0266715157753117
-		3.6365210206309979 6.2357504917390463 -1.0521770889234408
-		3.4359296476498269 6.4416422179691786 -1.0648198712118844
-		3.4318574567407305 6.7198835207830498 -1.0566227660773704
-		3.6048130023475999 6.8284511647074941 -1.0375342971966579
-		3.807733674119091 6.7578937276955431 -0.82431245218976623
-		3.736655044905052 6.6267795329237877 -0.81923627944540756
-		;
-createNode transform -n "Lower_Branch" -p "Tree";
-	rename -uid "9890D880-4DD8-77AB-590C-3C98190B3392";
-createNode nurbsCurve -n "Lower_BranchShape" -p "Lower_Branch";
-	rename -uid "7DFC1E8E-48B0-BBC7-45AB-F5BA96087C2F";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 2 0 no 3
-		7 0 0 0 1 2 2 2
-		5
-		1.6970556974411011 3.6970667839050293 -1.9225263595581055
-		0.77994060604808302 4.0125967453806428 -2.1556756752073412
-		1.1598326487190838 4.5148840522673632 -1.9225263595581055
-		0.76031296720658248 5.4029215682648237 -1.3735116674836427
-		-0.14079181522014594 5.5851953741384763 -2.1989989666236074
-		;
-createNode transform -n "L_Lower_Curl" -p "Lower_Branch";
-	rename -uid "4BCE424B-4CEF-6755-B4C5-0ABB074795DF";
-	setAttr ".v" no;
-createNode nurbsCurve -n "L_Lower_CurlShape" -p "L_Lower_Curl";
-	rename -uid "0E4ED16A-4B1F-27B0-D003-11888F110115";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 7 0 no 3
-		12 0 0 0 1 2 3 4 5 6 7 7 7
-		10
-		-0.30933859944343567 5.5813579559326172 -2.3278045654296875
-		-0.44772021075421387 5.5120553226081279 -2.4165195132009409
-		-0.62445526248237326 5.3748466202722591 -2.4451919095270043
-		-0.76305316863480621 5.0138981751595377 -2.3278045654296875
-		-0.44786592403889003 4.8461372223907446 -2.3278045654296875
-		-0.10217668803046606 5.0088145099241199 -2.3278045654296875
-		-0.050257022006601565 5.3290854197554536 -2.2359364179234671
-		-0.31879913781693114 5.4358423896992312 -2.2644521305896785
-		-0.50378624162848762 5.293499763107528 -2.3278045654296875
-		-0.42014745471969794 5.1562408017512418 -2.3573373208026416
-		;
-createNode transform -n "L_Upper_Curl" -p "Lower_Branch";
-	rename -uid "399FD7FE-4DB7-4C53-D8FC-E089708CECD7";
-	setAttr ".v" no;
-createNode nurbsCurve -n "L_Upper_CurlShape" -p "L_Upper_Curl";
-	rename -uid "6B285D72-4F9E-974F-1725-B1861B5FCE37";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 11 0 no 3
-		16 0 0 0 1 2 3 4 5 6 7 8 9 10 11 11 11
-		14
-		-0.21588951349258423 5.695789681741414 -2.2836125903530942
-		0.089601364998390554 5.8845655559140377 -2.2006258816148661
-		-0.12692784105296206 6.0860361160810728 -2.4150617239962218
-		-0.072030337460938842 6.7114631474416573 -2.3485090029934579
-		0.58056785025564106 6.7451652513329963 -2.3507540443823669
-		0.86019593071715705 6.3469519152302389 -2.2885370468116557
-		0.84187337300224063 6.0012733506062776 -2.2679362297058105
-		0.662598152019932 5.7513477235948169 -2.267936116284651
-		0.29702880532700282 5.8660432935341333 -2.2799185286095933
-		0.18854422226058554 6.1643722421874942 -2.3060795358525308
-		0.35589986675910257 6.5125083136723205 -2.3155020469262864
-		0.58627588492777871 6.4867454974895127 -2.2322840690612793
-		0.6737855926756815 6.391534307819434 -2.2322840690612793
-		0.61609495227201005 6.3154251302083884 -2.2322839590859651
-		;
-createNode transform -n "Trunk" -p "Tree";
-	rename -uid "E5F68D7C-4515-374C-F861-86B655A38717";
-createNode nurbsCurve -n "TrunkShape" -p "Trunk";
-	rename -uid "25CD76F2-40A5-3CCF-2893-5BB40B7DE92B";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 2 0 no 3
-		7 0 0 0 1 2 2 2
-		5
-		1.9101580381393433 1.3665392398834229 -1.9329572916030884
-		1.5530799475752377 2.4770642201834865 -1.9329572916030884
-		2.3787680209697335 3.8925294888597635 -1.9329572916030884
-		1.5664978036140418 5.3473132372214938 -1.9329572916030884
-		1.956198705631631 6.6448230668414157 -1.9329572916030884
-		;
-createNode transform -n "Base" -p "Tree";
+createNode transform -n "Tree_Body" -p "Tree";
 	rename -uid "233F0B37-4FE5-FEED-6A95-138A0B19D520";
 	setAttr ".rp" -type "double3" 1.9703271185924083 0.82284968116224899 -1.7438501615373194 ;
 	setAttr ".sp" -type "double3" 1.9703271185924083 0.82284968116224899 -1.7438501615373194 ;
-createNode mesh -n "BaseShape" -p "Base";
+createNode mesh -n "Tree_BodyShape" -p "Tree_Body";
 	rename -uid "3E26B894-4199-6715-AC00-E8B9C5C85E0D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -1221,7 +1082,7 @@ createNode mesh -n "BaseShape" -p "Base";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "polySurfaceShape7" -p "Base";
+createNode mesh -n "polySurfaceShape7" -p "Tree_Body";
 	rename -uid "64B2D94C-4553-1BA3-0531-5ABD2D74ED83";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1877,7 +1738,7 @@ createNode mesh -n "polySurfaceShape7" -p "Base";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Root" -p "Base";
+createNode transform -n "Root" -p "Tree_Body";
 	rename -uid "94EBFEEB-4653-C3EC-1B69-92A8798F3F7C";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0.093397995243614584 0 ;
@@ -1894,7 +1755,7 @@ createNode nurbsCurve -n "RootShape" -p "Root";
 		3.2370838478408941 1.1708292035053849 -1.1301657279352793
 		3.3452400331182668 0.93670060191753601 -0.3863496991768256
 		;
-createNode transform -n "Root1" -p "Base";
+createNode transform -n "Root1" -p "Tree_Body";
 	rename -uid "74AD3941-48CE-C47B-2283-EA9E716E39CB";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0.093397995243614584 0 ;
@@ -1911,7 +1772,7 @@ createNode nurbsCurve -n "RootShape1" -p "Root1";
 		2.2397531773753774 1.2498614963365666 0.1404539843771111
 		1.3705809775530922 0.89947260341764879 0.55257087077114964
 		;
-createNode transform -n "Root2" -p "Base";
+createNode transform -n "Root2" -p "Tree_Body";
 	rename -uid "49F7A677-4805-C836-CBE1-C0A2FDC4A60A";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0.093397995243614584 0 ;
@@ -1929,7 +1790,7 @@ createNode nurbsCurve -n "RootShape2" -p "Root2";
 		0.7071890287567788 1.154192442531853 -0.10109691629569972
 		0.33718414413756514 0.83681683935000484 -0.40885107060544956
 		;
-createNode transform -n "Root3" -p "Base";
+createNode transform -n "Root3" -p "Tree_Body";
 	rename -uid "717B94BC-4DA6-EB95-2941-BDA572F8DD48";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0.093397995243614584 0 ;
@@ -1946,7 +1807,7 @@ createNode nurbsCurve -n "RootShape3" -p "Root3";
 		1.0147586328323623 1.3895779522410092 -2.2406924279854641
 		0.059906198787205156 0.8189064191664136 -2.1022997291324259
 		;
-createNode transform -n "Root4" -p "Base";
+createNode transform -n "Root4" -p "Tree_Body";
 	rename -uid "376CE3FF-4FAD-ACD1-7765-6BAC712A2B8D";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0.093397995243614584 0 ;
@@ -1964,7 +1825,7 @@ createNode nurbsCurve -n "RootShape4" -p "Root4";
 		1.9261009867842773 1.2496968015457082 -2.9421407791640579
 		1.6331010079327988 1.2496968015457082 -2.9780813281428395
 		;
-createNode transform -n "Root5" -p "Base";
+createNode transform -n "Root5" -p "Tree_Body";
 	rename -uid "33B1635C-4693-ADE5-BAE2-D58CB097607E";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0.093397995243614584 0 ;
@@ -1981,6 +1842,145 @@ createNode nurbsCurve -n "RootShape5" -p "Root5";
 		2.6901959390882388 1.3227460092603942 -2.4644570825175744
 		3.5684010944047944 1.3227460092603938 -2.915126144050578
 		2.984074099404868 0.97279170766288525 -2.9251555793258674
+		;
+createNode transform -n "Upper_Branch" -p "Tree";
+	rename -uid "2B8817DF-4A9F-A581-1C41-02BEDE660811";
+	setAttr ".v" no;
+createNode nurbsCurve -n "Upper_BranchShape" -p "Upper_Branch";
+	rename -uid "55E25DC9-47CE-E20B-EB96-E6B776F955BC";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 2 0 no 3
+		7 0 0 0 1 2 2 2
+		5
+		2.1181740760803223 5.0552067756652832 -1.9052619934082031
+		2.7908768651444333 5.7902388905090394 -1.9052619934082031
+		2.3847713527942029 6.1234696260919605 -1.9052619934082031
+		2.7006000675942645 6.7494776123112334 -1.7648508349391616
+		3.5706388065427115 6.9770551626724826 -1.2081877686787346
+		;
+createNode transform -n "U_Upper_Curl" -p "Upper_Branch";
+	rename -uid "EEE25FF6-4E3C-A993-6805-D38C6FDFE385";
+	setAttr ".v" no;
+createNode nurbsCurve -n "U_Upper_CurlShape" -p "U_Upper_Curl";
+	rename -uid "B83CF2E0-49C1-13DA-C5D1-D68A29E12E85";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 0 no 3
+		13 0 0 0 1 2 3 4 5 6 7 8 8 8
+		11
+		2.0175867080688477 6.9227442741394043 -1.9244134426116943
+		2.0436176559760031 7.2745492910758136 -1.9547634124755859
+		1.983061578598158 7.8999085007880847 -1.9547634124755859
+		1.2248494641725189 8.6170281845837913 -2.0693934847552931
+		0.5023772279979799 8.6634811498852748 -1.8538868723194057
+		0.28102450533330026 8.2578861860123727 -2.0255548958935097
+		0.55600286332781312 7.8697571802873503 -2.0090762305582519
+		1.048577696434331 7.7754889890303547 -1.9533265722304158
+		1.1270900540937088 8.1437233409890784 -1.976527472991725
+		0.8524650266335716 8.3559921421513987 -2.0070797271522411
+		0.76722063316635492 8.2433917204419132 -2.0310747251557317
+		;
+createNode transform -n "U_Lower_Curl" -p "Upper_Branch";
+	rename -uid "EF823AA4-44A3-9411-D5B0-9783301B2DDB";
+	setAttr ".v" no;
+createNode nurbsCurve -n "U_Lower_CurlShape" -p "U_Lower_Curl";
+	rename -uid "1DFEFC1C-4669-FAD4-DD8D-6DAE90A578E9";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 9 0 no 3
+		14 0 0 0 1 2 3 4 5 6 7 8 9 9 9
+		12
+		3.834355354309082 7.0619053840637207 -1.0404906272888184
+		3.9412247046000015 7.0921767465957437 -1.0041090958461165
+		4.2446585921222475 6.9436562697533928 -1.0098354297253724
+		4.2912861398530788 6.6886652895615084 -1.1109625792600795
+		4.146501368343408 6.369994843983422 -1.0023377167041834
+		3.9186837321596615 6.2532809588371974 -1.0266715157753117
+		3.6365210206309979 6.2357504917390463 -1.0521770889234408
+		3.4359296476498269 6.4416422179691786 -1.0648198712118844
+		3.4318574567407305 6.7198835207830498 -1.0566227660773704
+		3.6048130023475999 6.8284511647074941 -1.0375342971966579
+		3.807733674119091 6.7578937276955431 -0.82431245218976623
+		3.736655044905052 6.6267795329237877 -0.81923627944540756
+		;
+createNode transform -n "Lower_Branch" -p "Tree";
+	rename -uid "9890D880-4DD8-77AB-590C-3C98190B3392";
+	setAttr ".v" no;
+createNode nurbsCurve -n "Lower_BranchShape" -p "Lower_Branch";
+	rename -uid "7DFC1E8E-48B0-BBC7-45AB-F5BA96087C2F";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 2 0 no 3
+		7 0 0 0 1 2 2 2
+		5
+		1.6970556974411011 3.6970667839050293 -1.9225263595581055
+		0.77994060604808302 4.0125967453806428 -2.1556756752073412
+		1.1598326487190838 4.5148840522673632 -1.9225263595581055
+		0.76031296720658248 5.4029215682648237 -1.3735116674836427
+		-0.14079181522014594 5.5851953741384763 -2.1989989666236074
+		;
+createNode transform -n "L_Lower_Curl" -p "Lower_Branch";
+	rename -uid "4BCE424B-4CEF-6755-B4C5-0ABB074795DF";
+	setAttr ".v" no;
+createNode nurbsCurve -n "L_Lower_CurlShape" -p "L_Lower_Curl";
+	rename -uid "0E4ED16A-4B1F-27B0-D003-11888F110115";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 7 0 no 3
+		12 0 0 0 1 2 3 4 5 6 7 7 7
+		10
+		-0.30933859944343567 5.5813579559326172 -2.3278045654296875
+		-0.44772021075421387 5.5120553226081279 -2.4165195132009409
+		-0.62445526248237326 5.3748466202722591 -2.4451919095270043
+		-0.76305316863480621 5.0138981751595377 -2.3278045654296875
+		-0.44786592403889003 4.8461372223907446 -2.3278045654296875
+		-0.10217668803046606 5.0088145099241199 -2.3278045654296875
+		-0.050257022006601565 5.3290854197554536 -2.2359364179234671
+		-0.31879913781693114 5.4358423896992312 -2.2644521305896785
+		-0.50378624162848762 5.293499763107528 -2.3278045654296875
+		-0.42014745471969794 5.1562408017512418 -2.3573373208026416
+		;
+createNode transform -n "L_Upper_Curl" -p "Lower_Branch";
+	rename -uid "399FD7FE-4DB7-4C53-D8FC-E089708CECD7";
+	setAttr ".v" no;
+createNode nurbsCurve -n "L_Upper_CurlShape" -p "L_Upper_Curl";
+	rename -uid "6B285D72-4F9E-974F-1725-B1861B5FCE37";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 11 0 no 3
+		16 0 0 0 1 2 3 4 5 6 7 8 9 10 11 11 11
+		14
+		-0.21588951349258423 5.695789681741414 -2.2836125903530942
+		0.089601364998390554 5.8845655559140377 -2.2006258816148661
+		-0.12692784105296206 6.0860361160810728 -2.4150617239962218
+		-0.072030337460938842 6.7114631474416573 -2.3485090029934579
+		0.58056785025564106 6.7451652513329963 -2.3507540443823669
+		0.86019593071715705 6.3469519152302389 -2.2885370468116557
+		0.84187337300224063 6.0012733506062776 -2.2679362297058105
+		0.662598152019932 5.7513477235948169 -2.267936116284651
+		0.29702880532700282 5.8660432935341333 -2.2799185286095933
+		0.18854422226058554 6.1643722421874942 -2.3060795358525308
+		0.35589986675910257 6.5125083136723205 -2.3155020469262864
+		0.58627588492777871 6.4867454974895127 -2.2322840690612793
+		0.6737855926756815 6.391534307819434 -2.2322840690612793
+		0.61609495227201005 6.3154251302083884 -2.2322839590859651
+		;
+createNode transform -n "Trunk" -p "Tree";
+	rename -uid "E5F68D7C-4515-374C-F861-86B655A38717";
+	setAttr ".v" no;
+createNode nurbsCurve -n "TrunkShape" -p "Trunk";
+	rename -uid "25CD76F2-40A5-3CCF-2893-5BB40B7DE92B";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 2 0 no 3
+		7 0 0 0 1 2 2 2
+		5
+		1.9101580381393433 1.3665392398834229 -1.9329572916030884
+		1.5530799475752377 2.4770642201834865 -1.9329572916030884
+		2.3787680209697335 3.8925294888597635 -1.9329572916030884
+		1.5664978036140418 5.3473132372214938 -1.9329572916030884
+		1.956198705631631 6.6448230668414157 -1.9329572916030884
 		;
 createNode transform -n "Fence";
 	rename -uid "08EDAF74-498D-15A1-4E4B-6C843784A5AF";
@@ -14290,7 +14290,7 @@ connectAttr ":defaultColorMgtGlobals.cfp" "Reference_ImageShape.cmcp";
 connectAttr ":defaultColorMgtGlobals.wsn" "Reference_ImageShape.ws";
 connectAttr ":frontShape.msg" "Reference_ImageShape.ltc";
 connectAttr "polyCube2.out" "GroundShape.i";
-connectAttr "polyExtrudeFace7.out" "BaseShape.i";
+connectAttr "polyExtrudeFace7.out" "Tree_BodyShape.i";
 connectAttr "deleteComponent1.og" "polySurfaceShape3.i";
 connectAttr "groupId3.id" "polySurfaceShape3.iog.og[0].gid";
 connectAttr "standardSurface6SG.mwc" "polySurfaceShape3.iog.og[0].gco";
@@ -14394,7 +14394,7 @@ connectAttr "pTorusShape1.iog" "standardSurface5SG.dsm" -na;
 connectAttr "pCylinderShape4.iog" "standardSurface5SG.dsm" -na;
 connectAttr "pTorusShape3.iog" "standardSurface5SG.dsm" -na;
 connectAttr "pCylinderShape5.iog" "standardSurface5SG.dsm" -na;
-connectAttr "BaseShape.iog" "standardSurface5SG.dsm" -na;
+connectAttr "Tree_BodyShape.iog" "standardSurface5SG.dsm" -na;
 connectAttr "standardSurface5SG.msg" "materialInfo4.sg";
 connectAttr "Hershey_Brown.msg" "materialInfo4.m";
 connectAttr "Deep_Grey.oc" "standardSurface6SG.ss";
@@ -14439,47 +14439,47 @@ connectAttr "polySplitRing3.out" "polySplitRing4.ip";
 connectAttr "polySurfaceShape6.wm" "polySplitRing4.mp";
 connectAttr "polySurfaceShape7.o" "polyExtrudeFace1.ip";
 connectAttr "TrunkShape.ws" "polyExtrudeFace1.ipc";
-connectAttr "BaseShape.wm" "polyExtrudeFace1.mp";
+connectAttr "Tree_BodyShape.wm" "polyExtrudeFace1.mp";
 connectAttr "polyExtrudeFace1.out" "polyCircularize1.ip";
-connectAttr "BaseShape.wm" "polyCircularize1.mp";
+connectAttr "Tree_BodyShape.wm" "polyCircularize1.mp";
 connectAttr "polyCircularize1.out" "polyExtrudeFace2.ip";
 connectAttr "Lower_BranchShape.ws" "polyExtrudeFace2.ipc";
-connectAttr "BaseShape.wm" "polyExtrudeFace2.mp";
+connectAttr "Tree_BodyShape.wm" "polyExtrudeFace2.mp";
 connectAttr "polyExtrudeFace2.out" "polySplitRing5.ip";
-connectAttr "BaseShape.wm" "polySplitRing5.mp";
+connectAttr "Tree_BodyShape.wm" "polySplitRing5.mp";
 connectAttr "polySplitRing5.out" "polySplitRing6.ip";
-connectAttr "BaseShape.wm" "polySplitRing6.mp";
+connectAttr "Tree_BodyShape.wm" "polySplitRing6.mp";
 connectAttr "polySplitRing6.out" "polyCircularize2.ip";
-connectAttr "BaseShape.wm" "polyCircularize2.mp";
+connectAttr "Tree_BodyShape.wm" "polyCircularize2.mp";
 connectAttr "polyCircularize2.out" "polyExtrudeFace3.ip";
 connectAttr "Upper_BranchShape.ws" "polyExtrudeFace3.ipc";
-connectAttr "BaseShape.wm" "polyExtrudeFace3.mp";
+connectAttr "Tree_BodyShape.wm" "polyExtrudeFace3.mp";
 connectAttr "polyExtrudeFace3.out" "polySplitRing7.ip";
-connectAttr "BaseShape.wm" "polySplitRing7.mp";
+connectAttr "Tree_BodyShape.wm" "polySplitRing7.mp";
 connectAttr "polySplitRing7.out" "polySplitRing8.ip";
-connectAttr "BaseShape.wm" "polySplitRing8.mp";
+connectAttr "Tree_BodyShape.wm" "polySplitRing8.mp";
 connectAttr "polySplitRing8.out" "polyCircularize3.ip";
-connectAttr "BaseShape.wm" "polyCircularize3.mp";
+connectAttr "Tree_BodyShape.wm" "polyCircularize3.mp";
 connectAttr "polyCircularize3.out" "polyExtrudeFace4.ip";
 connectAttr "L_Lower_CurlShape.ws" "polyExtrudeFace4.ipc";
-connectAttr "BaseShape.wm" "polyExtrudeFace4.mp";
+connectAttr "Tree_BodyShape.wm" "polyExtrudeFace4.mp";
 connectAttr "polyExtrudeFace4.out" "polySplitRing9.ip";
-connectAttr "BaseShape.wm" "polySplitRing9.mp";
+connectAttr "Tree_BodyShape.wm" "polySplitRing9.mp";
 connectAttr "polySplitRing9.out" "polyCircularize4.ip";
-connectAttr "BaseShape.wm" "polyCircularize4.mp";
+connectAttr "Tree_BodyShape.wm" "polyCircularize4.mp";
 connectAttr "polyCircularize4.out" "polyExtrudeFace5.ip";
 connectAttr "L_Upper_CurlShape.ws" "polyExtrudeFace5.ipc";
-connectAttr "BaseShape.wm" "polyExtrudeFace5.mp";
+connectAttr "Tree_BodyShape.wm" "polyExtrudeFace5.mp";
 connectAttr "polyExtrudeFace5.out" "polyCircularize5.ip";
-connectAttr "BaseShape.wm" "polyCircularize5.mp";
+connectAttr "Tree_BodyShape.wm" "polyCircularize5.mp";
 connectAttr "polyCircularize5.out" "polyExtrudeFace6.ip";
 connectAttr "U_Upper_CurlShape.ws" "polyExtrudeFace6.ipc";
-connectAttr "BaseShape.wm" "polyExtrudeFace6.mp";
+connectAttr "Tree_BodyShape.wm" "polyExtrudeFace6.mp";
 connectAttr "polyExtrudeFace6.out" "polyCircularize6.ip";
-connectAttr "BaseShape.wm" "polyCircularize6.mp";
+connectAttr "Tree_BodyShape.wm" "polyCircularize6.mp";
 connectAttr "polyCircularize6.out" "polyExtrudeFace7.ip";
 connectAttr "U_Lower_CurlShape.ws" "polyExtrudeFace7.ipc";
-connectAttr "BaseShape.wm" "polyExtrudeFace7.mp";
+connectAttr "Tree_BodyShape.wm" "polyExtrudeFace7.mp";
 connectAttr "Darker_Gray.oc" "standardSurface7SG.ss";
 connectAttr "pCubeShape3.iog" "standardSurface7SG.dsm" -na;
 connectAttr "pCubeShape2.iog" "standardSurface7SG.dsm" -na;
