@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Graveyard Scene.ma
-//Last modified: Mon, Nov 04, 2024 10:17:55 PM
+//Last modified: Mon, Nov 04, 2024 10:20:09 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "38823AF2-475C-4A4F-61C8-578CF8533845";
+fileInfo "UUID" "85ED5178-4E63-1EEB-5CD3-E79CADFB7850";
 createNode transform -s -n "persp";
 	rename -uid "1B47FD00-41CE-F7EC-C82F-CDB5749CD35F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.0322616764304069 2.2927743765903519 4.0274263843174163 ;
-	setAttr ".r" -type "double3" 168.11213158207926 -1588.6118755393395 179.99999999998781 ;
+	setAttr ".t" -type "double3" 3.7954764587454104 3.2540630101194945 2.3036596850587525 ;
+	setAttr ".r" -type "double3" 157.312131582039 -1676.2118755392976 179.99999999996805 ;
 	setAttr ".rp" -type "double3" -7.7715611723760958e-16 2.2204460492503131e-15 0 ;
 	setAttr ".rpt" -type "double3" -1.3145585030951518e-15 -3.7623646337824094e-16 6.9810212978662596e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -15642,7 +15642,7 @@ createNode mesh -n "Detailed_CrossShape2" -p "Detailed_Cross2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.58002180115438418 0.87087678988248296 ;
+	setAttr ".pv" -type "double2" 0.47257228288799524 0.48607739806175232 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
