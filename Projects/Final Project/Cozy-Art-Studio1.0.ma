@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Cozy-Art-Studio1.0.ma
-//Last modified: Tue, Dec 10, 2024 03:53:26 PM
+//Last modified: Tue, Dec 10, 2024 03:55:09 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,23 +13,23 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "7A7EFCA9-4CB9-B9F8-1BC5-C88A3AAF2540";
+fileInfo "UUID" "F09B7CD6-4A13-DC27-BF3E-5D8CE73D038A";
 createNode transform -s -n "persp";
 	rename -uid "19DB597A-4726-B4D1-4FA1-369DF04667E0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.149764720657606 9.2627610033245968 7.5706391989026587 ;
-	setAttr ".r" -type "double3" -30.599999999968414 1130.4000000000226 2.4948501567371252e-15 ;
+	setAttr ".t" -type "double3" 8.7323873898248721 7.5367138917650287 8.175209981594497 ;
+	setAttr ".r" -type "double3" -25.199999999968266 1126.0000000000221 -2.2892941456699261e-15 ;
 	setAttr ".rp" -type "double3" 0 -2.2204460492503131e-16 0 ;
 	setAttr ".rpt" -type "double3" 2.8833584364875323e-16 7.6620759991122161e-16 -2.0043122882191998e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A317DE35-47F1-5766-8909-F0B1355537ED";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 14.138163914532157;
+	setAttr ".coi" 12.526479153343857;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.10051369667053223 2.6600407063961029 0.075417280197143555 ;
+	setAttr ".tp" -type "double3" 0.38854062557220459 2.4273933619260788 0.34728407859802246 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "4041FCCF-4AE4-70D7-4281-0C9A21C0806B";
@@ -38348,7 +38348,6 @@ createNode transform -n "Scattered_Books";
 	rename -uid "0828502F-4415-7611-29A9-E399369D68C2";
 createNode transform -n "Book3" -p "Scattered_Books";
 	rename -uid "93CE8261-431B-3BD5-DDF3-AB88FEFBC511";
-	setAttr ".v" no;
 	setAttr ".rp" -type "double3" 0.27355587261632508 1.2543925822539759 2.2392564512129871 ;
 	setAttr ".sp" -type "double3" 0.27355587261632508 1.2543925822539759 2.2392564512129871 ;
 createNode mesh -n "Book3Shape" -p "Book3";
